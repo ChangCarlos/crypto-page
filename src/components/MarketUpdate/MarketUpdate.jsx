@@ -84,7 +84,6 @@ export const TableHeader = styled.div`
     padding: 16px 70px 16px 30px;
     border-radius: 4px 4px 0 0;
     background-color: #1D1429;
-    border-bottom: 1px solid #C6C6C6;
 `
 
 export const CoinIdName = styled.div`
@@ -111,7 +110,7 @@ export const CoinContainer = styled.div`
     justify-content: space-between;
     padding: 10px 10px 10px 30px;
     background-color: #1D1429;
-    border-bottom: 1px solid #C6C6C6;
+    border-top: 1px solid #C6C6C6;
 `
 
 export const CoinIdNameContainer = styled.div`
