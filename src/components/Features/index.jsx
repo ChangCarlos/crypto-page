@@ -3,22 +3,22 @@ import { Content, FeaturesCard, FeaturesCardsContainer, FeaturesContainer, Featu
 
 const allCards = [
     {
-        img: 'public/feature-image-1.png',
+        img: '/feature-image-1.png',
         title: 'Manage Portfolio',
         description: 'Buy and sell popular digital currencies, keep track of them in the one place.'
     },
     {
-        img: 'public/feature-image-2.png',
+        img: '/feature-image-2.png',
         title: 'Protected Securely',
         description: 'All cash balances are covered by FDIC insurance, up to a maximum of $250,000.'
     },
     {
-        img: 'public/feature-image-3.png',
+        img: '/feature-image-3.png',
         title: 'Cryptocurrency Variety',
         description: 'Supports a variety of the most popular digital currencies and always uptodate.'
     },
     {
-        img: 'public/feature-image-4.png',
+        img: '/feature-image-4.png',
         title: 'Learn Best Practice',
         description: 'Easy to know how to cryptocurrency works and friendly to newbie.'
     }
