@@ -3,36 +3,36 @@ import { Chart, Coin, CoinAlias, CoinImg, CoinInfo, CoinName, CoinTrendItem, Coi
 
 const allCoins = [
     {
-        icon: 'public/btc-icon.png',
+        icon: '/btc-icon.png',
         alias: 'BTC',
         name: 'BITCOIN',
         value: '$56,623.54',
         percent: '1.41%',
-        chart: 'public/chart-state-1.png'
+        chart: '/chart-state-1.png'
     },
     {
-        icon: 'public/eth-icon.png',
+        icon: '/eth-icon.png',
         alias: 'ETH',
         name: 'ETHEREUM',
         value: '$4,267.90',
         percent: '2.22%',
-        chart: 'public/chart-state-2.png'
+        chart: '/chart-state-2.png'
     },
     {
-        icon: 'public/bnb-icon.png',
+        icon: '/bnb-icon.png',
         alias: 'BNB',
         name: 'BINANCE',
         value: '$587.74',
         percent: '0.82%',
-        chart: 'public/chart-state-3.png'
+        chart: '/chart-state-3.png'
     },
     {
-        icon: 'public/usdt-icon.png',
+        icon: '/usdt-icon.png',
         alias: 'USDT',
         name: 'TETHER',
         value: '$0.9998',
         percent: '0.03%',
-        chart: 'public/chart-state-4.png'
+        chart: '/chart-state-4.png'
     }
 ]
 

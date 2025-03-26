@@ -14,66 +14,66 @@ const allCategories = [
 const allCoins = [
     {
         id: 1,
-        img: 'public/btc-icon.png',
+        img: '/btc-icon.png',
         name: 'Bitcoin',
         alias: 'BTC',
         value: '$56,623.54',
         percent: '1.41%',
-        chart: 'public/chart-state-1.png'
+        chart: '/chart-state-1.png'
     },
     {
         id: 2,
-        img: 'public/eth-icon.png',
+        img: '/eth-icon.png',
         name: 'Ethereum',
         alias: 'ETH',
         value: '$4,267.90',
         percent: '2.22%',
-        chart: 'public/chart-state-2.png'
+        chart: '/chart-state-2.png'
     },
     {
         id: 3,
-        img: 'public/bnb-icon.png',
+        img: '/bnb-icon.png',
         name: 'Binance',
         alias: 'BNB',
         value: '$587.74',
         percent: '-0.82%',
-        chart: 'public/chart-state-3.png'
+        chart: '/chart-state-3.png'
     },
     {
         id: 4,
-        img: 'public/usdt-icon.png',
+        img: '/usdt-icon.png',
         name: 'Tether',
         alias: 'USDT',
         value: '$0.9998',
         percent: '-0.03%',
-        chart: 'public/chart-state-4.png'
+        chart: '/chart-state-4.png'
     },
     {
         id: 5,
-        img: 'public/sol-icon.png',
+        img: '/sol-icon.png',
         name: 'Solana',
         alias: 'SOL',
         value: '$213.67',
         percent: '-0.53%',
-        chart: 'public/chart-state-5.png'
+        chart: '/chart-state-5.png'
     },
     {
         id: 6,
-        img: 'public/xrp-icon.png',
+        img: '/xrp-icon.png',
         name: 'XRP',
         alias: 'XRP',
         value: '$1.04',
         percent: '-0.44%',
-        chart: 'public/chart-state-6.png'
+        chart: '/chart-state-6.png'
     },
     {
         id: 7,
-        img: 'public/usdc-icon.png',
+        img: '/usdc-icon.png',
         name: 'USD Coin',
         alias: 'USDC',
         value: '$1.00',
         percent: '-0.03%',
-        chart: 'public/chart-state-7.png'
+        chart: '/chart-state-7.png'
     },
 ]
 
@@ -109,7 +109,7 @@ const MarketUpdate = () => {
                     </ValueContainer>
                     <PercentContainer>
                         <Text>
-                            {coin.value}
+                            {coin.percent}
                         </Text>
                     </PercentContainer>
                     <ChartContainer>
