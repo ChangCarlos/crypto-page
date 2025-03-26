@@ -57,4 +57,5 @@ export const GetStartedButton = styled.button`
     font-size: 16px;
     font-weight: 500;
     padding: 16px 24px;
+    cursor: pointer;
 `
