@@ -9,7 +9,8 @@ export const Container = styled.div`
     border-radius: 12px;
     background-color: #1D1429;
     border: 1px solid #C6C6C6;
-    margin: 0 167px auto;
+    margin: 0 auto;
+    margin-bottom: 136px;
 `
 
 export const DescriptionContainer = styled.div`
@@ -34,6 +35,7 @@ export const Description = styled.p`
 `
 
 export const Button = styled.button`
+    font-family: 'Raleway', sans-serif;
     padding: 16px 24px;
     font-size: 16px;
     font-weight: 500;
