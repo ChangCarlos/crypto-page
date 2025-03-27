@@ -72,84 +72,55 @@ export const SearchInput = styled.input`
     border: none;
 `
 
-export const TableCrypto = styled.div`
-    display: flex;
-    flex-direction: column;
+export const TableCrypto = styled.table`
+    width: 100%;
+    border-collapse: collapse;
     border: 1px solid #C6C6C6;
-`
-
-export const TableHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 70px 16px 30px;
-    border-radius: 4px 4px 0 0;
     background-color: #1D1429;
 `
 
-export const CoinIdName = styled.div`
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+export const TableHeaderRow = styled.tr`
+    background-color: #1D1429;
 `
 
-export const TableHeaderTitle = styled.p`
-    font-family: 'Roboto', sans-serif;
+export const TableHeader = styled.th`
+    padding: 16px;
+    text-align: left;
     font-size: 16px;
     font-weight: 500;
     color: #B6B6B6;
+    border-bottom: 1px solid #C6C6C6;
 `
 
-export const Columns = styled.div`
-    display: flex;
-    justify-content: space-between;
-    gap: 90px;
-`
-
-export const CoinContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px 10px 30px;
-    background-color: #1D1429;
+export const TableRow = styled.tr`
     border-top: 1px solid #C6C6C6;
+
+    &:nth-child(even) {
+        background-color: #251b34;
+    }
 `
 
-export const CoinIdNameContainer = styled.div`
+export const TableCell = styled.td`
+    padding: 12px;
+    font-size: 16px;
+    color: #B6B6B6;
+`
+
+export const CoinInfo = styled.div`
     display: flex;
     align-items: center;
-`
-
-export const CoinId = styled.div`
-    display: flex;
-    width: 65px;
-    gap: 10px;
-    padding: 4px 10px 4px 0;
-`
-
-export const CoinNameContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-`
-
-export const CoinName = styled.div`
-    display: flex;
-    width: 343px;
     gap: 12px;
 `
 
-export const Divider = styled.div`
-    width: 1px;
-    heigh: 24px;
-    background-color: #403A3A;
-    border-radius: 2px;
-`
-
-export const Text = styled.p`
-    font-family: 'Roboto', sans-serif;
+export const CoinText = styled.p`
     font-size: 16px;
     font-weight: 400;
     color: #B6B6B6;
+    
+    span {
+        color: #888;
+        font-size: 14px;
+    }
 `
 
 export const CoinImg = styled.img`
@@ -157,46 +128,14 @@ export const CoinImg = styled.img`
     height: 44px;
 `
 
-export const CoinDataContainer = styled.div`
-    display: flex;
-    align-items: center;
-`
-
-export const ValueContainer = styled.div`
-    display: flex;
-    width: 180px;
-    gap: 10px;
-    padding: 4px 10px 4px 0;
-`
-
-export const PercentContainer = styled.div`
-    display: flex;
-    width: 160px;
-    gap: 10px;
-    padding: 4px 10px 4px 0;
-`
-
-export const ChartContainer = styled.div`
-    display: flex;
-    width: 195px;
-    height: 40px;
-`
-
 export const Chart = styled.img`
     width: 76px;
     height: 40px;
 `
 
-export const ButtonContainer = styled.div`
-    display: flex;
-    width: 120px;
-`
-
 export const TradeButton = styled.button`
     width: 92px;
     height: 32px;
-    margin-right: 12px;
-    padding: 4px 24px;
     background-color: #0FAE96;
     color: #FFFFFF;
     font-size: 16px;

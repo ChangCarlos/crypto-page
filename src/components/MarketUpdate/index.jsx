@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { Categories, CategoriesNavBar, CategoriesTitle, Category, CategoryContainer, Chart, ChartContainer, CoinContainer, CoinDataContainer, CoinId, CoinIdName, CoinIdNameContainer, CoinImg, CoinName, CoinNameContainer, Columns, Divider, MarketContainer, PercentContainer, SearchContainer, SearchInput, TableCrypto, TableHeader, TableHeaderTitle, Text, Title, TradeButton, ValueContainer } from "./MarketUpdate";
+import { Categories, CategoriesNavBar, CategoriesTitle, Category, CategoryContainer, Chart, CoinImg, MarketContainer, SearchContainer, SearchInput, TableCrypto, TableHeader, Title, TradeButton, TableRow, TableCell, TableHeaderRow, CoinInfo, CoinText } from "./MarketUpdate";
 
 const allCategories = [
     'Popular',
@@ -78,105 +78,62 @@ const allCoins = [
 ]
 
 const MarketUpdate = () => {
-    const categories = allCategories.map(category => <Category>{category}</Category>)
-    const coins = allCoins.map(coin => {
-        return (
-            <CoinContainer>
-                <CoinIdNameContainer>
-                    <CoinId>
-                        <Text>
-                            {coin.id}
-                        </Text>
-                    </CoinId>
-                    <CoinNameContainer>
-                        <CoinImg src={coin.img} />
-                        <CoinName>
-                            <Text>
-                                {coin.name}
-                            </Text>
-                            <Divider />
-                            <Text>
-                                {coin.alias}
-                            </Text>
-                        </CoinName>
-                    </CoinNameContainer>
-                </CoinIdNameContainer>
-                <CoinDataContainer>
-                    <ValueContainer>
-                        <Text>
-                            {coin.value}
-                        </Text>
-                    </ValueContainer>
-                    <PercentContainer>
-                        <Text>
-                            {coin.percent}
-                        </Text>
-                    </PercentContainer>
-                    <ChartContainer>
-                        <Chart src={coin.chart} />
-                    </ChartContainer>
-                    <TradeButton>
-                        Trade
-                    </TradeButton>
-                </CoinDataContainer>
-            </CoinContainer>
-        )
-    })
+    const categories = allCategories.map((category, index) => (
+        <Category key={index}>{category}</Category>
+    ));
 
     return (
         <MarketContainer>
-            <Title>
-                Market Update
-            </Title>
+            <Title>Market Update</Title>
             <CategoryContainer>
-                <CategoriesTitle>
-                    Cryptocurrency Categories
-                </CategoriesTitle>
+                <CategoriesTitle>Cryptocurrency Categories</CategoriesTitle>
                 <CategoriesNavBar>
-                    <Categories>
-                        {categories}
-                    </Categories>
+                    <Categories>{categories}</Categories>
                     <SearchContainer>
-                        <Search
-                            size={24}
-                            color="#B6B6B6"
-                        />
-                        <SearchInput
-                            type="text"
-                            placeholder="Search Coin"
-                        />
+                        <Search size={24} color="#B6B6B6" />
+                        <SearchInput type="text" placeholder="Search Coin" />
                     </SearchContainer>
                 </CategoriesNavBar>
             </CategoryContainer>
             <TableCrypto>
-                <TableHeader>
-                    <CoinIdName>
-                        <TableHeaderTitle>
-                            NO
-                        </TableHeaderTitle>
-                        <TableHeaderTitle>
-                            NAME
-                        </TableHeaderTitle>
-                    </CoinIdName>
-                    <Columns>
-                        <TableHeaderTitle>
-                            LAST PRICE
-                        </TableHeaderTitle>
-                        <TableHeaderTitle>
-                            CHANGE
-                        </TableHeaderTitle>
-                        <TableHeaderTitle>
-                            MARKET STATS
-                        </TableHeaderTitle>
-                        <TableHeaderTitle>
-                            TRADE
-                        </TableHeaderTitle>
-                    </Columns>
-                </TableHeader>
-                {coins}
+                <thead>
+                    <TableHeaderRow>
+                        <TableHeader>NO</TableHeader>
+                        <TableHeader>NAME</TableHeader>
+                        <TableHeader>LAST PRICE</TableHeader>
+                        <TableHeader>CHANGE</TableHeader>
+                        <TableHeader>MARKET STATS</TableHeader>
+                        <TableHeader>TRADE</TableHeader>
+                    </TableHeaderRow>
+                </thead>
+                <tbody>
+                    {allCoins.map((coin) => (
+                        <TableRow key={coin.id}>
+                            <TableCell>{coin.id}</TableCell>
+                            <TableCell>
+                                <CoinInfo>
+                                    <CoinImg src={coin.img} alt={coin.name} />
+                                    <CoinText>
+                                        {coin.name} <span>{coin.alias}</span>
+                                    </CoinText>
+                                </CoinInfo>
+                            </TableCell>
+                            <TableCell>{coin.value}</TableCell>
+                            <TableCell>{coin.percent}</TableCell>
+                            <TableCell>
+                                <Chart src={coin.chart} alt="Chart" />
+                            </TableCell>
+                            <TableCell>
+                                <TradeButton>Trade</TradeButton>
+                            </TableCell>
+                        </TableRow>
+                    ))}
+                </tbody>
             </TableCrypto>
         </MarketContainer>
-    )
-}
+    );
+};
+
+
 
 export default MarketUpdate;
