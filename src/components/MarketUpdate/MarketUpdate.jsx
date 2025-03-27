@@ -145,3 +145,11 @@ export const TradeButton = styled.button`
     border-radius: 10px;
     cursor: pointer;
 `
+
+export const SeeAllLink = styled.a`
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0FAE96;
+    text-decoration: underline;
+`

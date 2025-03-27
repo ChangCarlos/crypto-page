@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { Categories, CategoriesNavBar, CategoriesTitle, Category, CategoryContainer, Chart, CoinImg, MarketContainer, SearchContainer, SearchInput, TableCrypto, TableHeader, Title, TradeButton, TableRow, TableCell, TableHeaderRow, CoinInfo, CoinText } from "./MarketUpdate";
+import { Categories, CategoriesNavBar, CategoriesTitle, Category, CategoryContainer, Chart, CoinImg, MarketContainer, SearchContainer, SearchInput, TableCrypto, TableHeader, Title, TradeButton, TableRow, TableCell, TableHeaderRow, CoinInfo, CoinText, SeeAllLink } from "./MarketUpdate";
 
 const allCategories = [
     'Popular',
@@ -84,14 +84,26 @@ const MarketUpdate = () => {
 
     return (
         <MarketContainer>
-            <Title>Market Update</Title>
+            <Title>
+                Market Update
+            </Title>
             <CategoryContainer>
-                <CategoriesTitle>Cryptocurrency Categories</CategoriesTitle>
+                <CategoriesTitle>
+                    Cryptocurrency Categories
+                </CategoriesTitle>
                 <CategoriesNavBar>
-                    <Categories>{categories}</Categories>
+                    <Categories>
+                        {categories}
+                    </Categories>
                     <SearchContainer>
-                        <Search size={24} color="#B6B6B6" />
-                        <SearchInput type="text" placeholder="Search Coin" />
+                        <Search
+                            size={24}
+                            color="#B6B6B6"
+                        />
+                        <SearchInput
+                            type="text"
+                            placeholder="Search Coin"
+                        />
                     </SearchContainer>
                 </CategoriesNavBar>
             </CategoryContainer>
@@ -109,19 +121,31 @@ const MarketUpdate = () => {
                 <tbody>
                     {allCoins.map((coin) => (
                         <TableRow key={coin.id}>
-                            <TableCell>{coin.id}</TableCell>
+                            <TableCell>
+                                {coin.id}
+                            </TableCell>
                             <TableCell>
                                 <CoinInfo>
-                                    <CoinImg src={coin.img} alt={coin.name} />
+                                    <CoinImg
+                                        src={coin.img}
+                                        alt={coin.name}
+                                    />
                                     <CoinText>
                                         {coin.name} <span>{coin.alias}</span>
                                     </CoinText>
                                 </CoinInfo>
                             </TableCell>
-                            <TableCell>{coin.value}</TableCell>
-                            <TableCell>{coin.percent}</TableCell>
                             <TableCell>
-                                <Chart src={coin.chart} alt="Chart" />
+                                {coin.value}
+                            </TableCell>
+                            <TableCell>
+                                {coin.percent}
+                            </TableCell>
+                            <TableCell>
+                                <Chart
+                                    src={coin.chart}
+                                    alt="Chart"
+                                />
                             </TableCell>
                             <TableCell>
                                 <TradeButton>Trade</TradeButton>
@@ -130,6 +154,9 @@ const MarketUpdate = () => {
                     ))}
                 </tbody>
             </TableCrypto>
+            <SeeAllLink>
+                See All Coins
+            </SeeAllLink>
         </MarketContainer>
     );
 };
