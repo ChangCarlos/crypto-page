@@ -1,4 +1,4 @@
-import { Article, ArticlesContainer, Content, HeaderSubtitle, HeaderTitle, Label, LearnContainer, LearnHeader, Subtitle, Thumbnail, Title } from "./LearnCrypto"
+import { Article, ArticlesContainer, Content, HeaderSubtitle, HeaderTitle, Label, LearnContainer, LearnHeader, SeeAllArticles, Subtitle, Thumbnail, Title } from "./LearnCrypto"
 
 const allArticles = [
     {
@@ -76,6 +76,9 @@ const LearnCrypto = () => {
             <ArticlesContainer>
                 {articles}
             </ArticlesContainer>
+            <SeeAllArticles>
+                See All Articles
+            </SeeAllArticles>
         </LearnContainer>
     )
 }

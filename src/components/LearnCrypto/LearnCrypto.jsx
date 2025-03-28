@@ -6,6 +6,7 @@ export const LearnContainer = styled.div`
     gap: 60px;
     max-width: 1262px;
     margin: 0 auto;
+    margin-bottom: 225px;
 `
 
 export const LearnHeader = styled.div`
@@ -80,4 +81,12 @@ export const Subtitle = styled.p`
     font-size: 14px;
     font-weight: 400;
     color: #B6B6B6;
+`
+
+export const SeeAllArticles = styled.a`
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0FAE96;
+    text-decoration: underline;
 `
