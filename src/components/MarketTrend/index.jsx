@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { Chart, Coin, CoinAlias, CoinImg, CoinInfo, CoinName, CoinTrendItem, CoinValue, Divider, MarketTrendContainer, MarketTrendContent, MarketTrendTitle, Percent, Value, ValueContainer } from "./MarketTrend"
+import { useState } from "react";
 
 const allCoins = [
     {

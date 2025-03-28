@@ -51,6 +51,11 @@ export const Category = styled.button`
     background-color: #1D1429;
     border: 1px solid #C6C6C6;
     cursor: pointer;
+
+    &:active {
+        background-color: #EAEAEA;
+        color: #211631;
+    }
 `
 
 export const SearchContainer = styled.div`
@@ -70,6 +75,12 @@ export const SearchInput = styled.input`
     color: #B6B6B6;
     background-color: transparent;
     border: none;
+
+    &:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
 `
 
 export const TableCrypto = styled.table`
@@ -153,3 +164,11 @@ export const SeeAllLink = styled.a`
     color: #0FAE96;
     text-decoration: underline;
 `
+
+export const NoResults = styled.p`
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #B6B6B6;
+    padding: 8px;
+`;
