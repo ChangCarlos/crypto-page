@@ -5,7 +5,7 @@ export const FeaturesContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 1256px;
+    max-width: 1256px;
     margin: 0 auto;
     gap: 69px;
     margin-bottom: 127px;

@@ -5,7 +5,7 @@ export const MarketTrendContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    width: 1260px;
+    max-width: 1260px;
     margin: 0 auto;
     margin-bottom: 186px;
     gap: 24px;
@@ -86,7 +86,7 @@ export const CoinValue = styled.div`
 export const ValueContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 140px;
+    max-width: 140px;
     gap: 9px;
 `
 

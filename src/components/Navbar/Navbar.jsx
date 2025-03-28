@@ -6,7 +6,10 @@ export const NavbarContainer = styled.div`
     align-items: center;
     height: 90px;
     padding: 0 90px;
+    margin: 0 auto;
     margin-bottom: 88px;
+    max-width: 1440px;
+    
 `
 
 export const LogoContainer = styled.div`
