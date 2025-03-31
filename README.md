@@ -12,4 +12,5 @@ Componentização, gerenciamento de estado.
 Melhorar a responsividade, manipulação de formulário, criação de rotas.
 
 Foi um grande aprendizado e um incentivo para seguir evoluindo! Se quiser conferir e deixar um feedback, o projeto está aqui:
- 🔗Site: https://lnkd.in/dVAsiKjF
+
+🔗Site: https://lnkd.in/dVAsiKjF
