@@ -10,7 +10,7 @@ const items = [
     'Learn'
 ]
 
-const Navbar = () => {
+const Navbar = ({openLogin}) => {
     const mappedItems = items.map(item => <Item>{item}</Item>)
     return (
         <NavbarContainer>
@@ -40,7 +40,7 @@ const Navbar = () => {
                         </LangOption>
                     </LangSelector>
                 </LangSelectContainer>
-                <LoginButton>
+                <LoginButton onClick={openLogin}>
                     Login
                 </LoginButton>
             </LoginContainer>

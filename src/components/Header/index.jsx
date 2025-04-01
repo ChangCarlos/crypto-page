@@ -1,6 +1,6 @@
 import { GetStartedButton, HeaderContainer, HeaderTitle, SubTitle, SubTitleContainer, Title, TitleContainer } from "./Header"
 
-const Header = () => {
+const Header = ({openCreateAccount}) => {
     return (
         <HeaderContainer>
             <HeaderTitle>
@@ -15,7 +15,7 @@ const Header = () => {
                 </SubTitle>
                 </SubTitleContainer>
             </HeaderTitle>
-            <GetStartedButton>
+            <GetStartedButton onClick={openCreateAccount}>
                 Get Started
             </GetStartedButton>
         </HeaderContainer>
