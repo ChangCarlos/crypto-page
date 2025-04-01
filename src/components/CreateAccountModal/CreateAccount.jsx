@@ -1,26 +1,27 @@
 import styled from "styled-components";
 
 export const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    overflow: auto;
 `
 
 export const ModalContainer = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
     background: #1a1a1a;
     width: 440px;
     border-radius: 8px;
     border: 1px solid #2E2E2E;
     padding: 24px;
     z-index: 11;
+
 `
 
 export const Header = styled.div`
