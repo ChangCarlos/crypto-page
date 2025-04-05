@@ -1,7 +1,10 @@
-import { Overlay, ModalContainer, Header, Logo, Title, FormContainer, Form, Label, Input, CreateAccountBtn, LoginContainer, Login, LoginTitle, LoginLink } from "./CreateAccount";
+import CreateAccountForm from "../CreateAccountForm";
+import { Overlay, ModalContainer, Header, Logo, Title, LoginContainer, Login, LoginTitle, LoginLink } from "./CreateAccount";
 import { X } from "lucide-react";
 
-const CreateAccountModal = ({onClose, onCreateAccountSubmit, onLogin}) => {
+
+const CreateAccountModal = ({onClose, onLogin}) => {
+
     return (
         <Overlay>
             <ModalContainer>
@@ -14,61 +17,7 @@ const CreateAccountModal = ({onClose, onCreateAccountSubmit, onLogin}) => {
                         Crie sua conta
                     </Title>
                 </Header>
-                <FormContainer>
-                    <Form onSubmit={onCreateAccountSubmit} key='submit-form'>
-                        <Label>
-                            Nome: <br /><br /> <Input
-                                type="text"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                           Sobrenome: <br /><br /> <Input
-                                type="text"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                            CPF: <br /><br /> <Input
-                                type="text"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                            Telefone: <br /><br /> <Input
-                                type="text"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                            E-mail: <br /><br /> <Input
-                                type="email"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                            Senha: <br /><br /> <Input
-                                type="password"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <CreateAccountBtn key='btn-signup'>
-                            Cadastrar
-                        </CreateAccountBtn>
-                    </Form>
-                </FormContainer>
+                    <CreateAccountForm />
                 <LoginContainer>
                     <Login>
                         <LoginTitle>

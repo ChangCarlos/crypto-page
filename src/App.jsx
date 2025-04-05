@@ -23,12 +23,12 @@ function App() {
       <Features />
       <ActionToLearn />
       <MarketUpdate />
-      <GetStarted />
+      <GetStarted openCreateAccount={() => setShowModal('create-account')}/>
       <LearnCrypto />
       <Footer />
 
-      {showModal === 'login' && <LoginModal onClose={() => setShowModal(null)} onLogInSubmit={(e) => { e.preventDefault(); alert('Clique no Login!')}} onCreateAccount={() => setShowModal('create-account')}/>}
-      {showModal === 'create-account' && <CreateAccountModal onClose={() => setShowModal(null)} onCreateAccountSubmit={(e) => { e.preventDefault(); alert('Clique no Cadastro!')}} onLogin={() => setShowModal('login')}/>}
+      {showModal === 'login' && <LoginModal onClose={() => setShowModal(null)} onCreateAccount={() => setShowModal('create-account')}/>}
+      {showModal === 'create-account' && <CreateAccountModal onClose={() => setShowModal(null)} onLogin={() => setShowModal('login')}/>}
     </>
   )
 }
