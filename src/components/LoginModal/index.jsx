@@ -1,7 +1,10 @@
 import { X } from "lucide-react";
-import { Form, FormContainer, Header, Input, Label, LogInBtn, Logo, ModalContainer, Overlay, Title, CreateAccountContainer, CreateAccount, CreateAccountTitle, CreateAccountLink, ForgotPassword } from "./LoginModal"
+import { Header, Logo, ModalContainer, Overlay, Title, CreateAccountContainer, CreateAccount, CreateAccountTitle, CreateAccountLink } from "./LoginModal"
+import LoginForm from "../LoginForm";
 
-const LoginModal = ({onClose, onLogInSubmit, onCreateAccount}) => {
+
+const LoginModal = ({onClose, onCreateAccount}) => {
+
     return (
         <Overlay>
             <ModalContainer>
@@ -14,33 +17,7 @@ const LoginModal = ({onClose, onLogInSubmit, onCreateAccount}) => {
                         Acesse sua conta
                     </Title>
                 </Header>
-                <FormContainer>
-                    <Form onSubmit={onLogInSubmit} key='submit-form'>
-                        <Label>
-                            E-mail: <br /><br /> <Input
-                                type="email"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <Label>
-                            Senha: <br /><br /> <Input
-                                type="password"
-                                required
-                            />
-                        </Label>
-                        <br />
-                        <br />
-                        <ForgotPassword href="#">
-                            Esqueceu sua senha?
-                        </ForgotPassword>
-                        <br />
-                        <LogInBtn key='btn-login'>
-                            Entrar
-                        </LogInBtn>
-                    </Form>
-                </FormContainer>
+                    <LoginForm />
                 <CreateAccountContainer>
                     <CreateAccount>
                         <CreateAccountTitle>

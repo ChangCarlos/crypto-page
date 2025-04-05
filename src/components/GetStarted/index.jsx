@@ -1,7 +1,7 @@
 import { Content, ContentContainer, ContentDescription, ContentImage, ContentSubtitle, ContentTitle, Description, GetStartedButton, GetStartedContainer, GetStartedSubtitle, GetStartedTitle, HowToGetStarted } from "./GetStarted"
 
 
-const GetStarted = () => {
+const GetStarted = ({openCreateAccount}) => {
     return (
         <GetStartedContainer>
             <HowToGetStarted>
@@ -12,7 +12,7 @@ const GetStarted = () => {
                     <GetStartedSubtitle>
                         Simple and easy to start your investment in cryptocurrency
                     </GetStartedSubtitle>
-                    <GetStartedButton>
+                    <GetStartedButton onClick={openCreateAccount}>
                         Get Started
                     </GetStartedButton>
                 </Description>

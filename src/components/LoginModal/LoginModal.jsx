@@ -120,3 +120,16 @@ export const CreateAccountLink = styled.a`
     text-decoration: none;
     cursor: pointer;
 `
+
+export const CreateAccountBtn = styled.button`
+    height: 42px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: #27AE60;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 18px;
+`
