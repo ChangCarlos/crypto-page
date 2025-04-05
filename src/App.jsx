@@ -10,6 +10,10 @@ import MarketUpdate from "./components/MarketUpdate"
 import Navbar from "./components/Navbar"
 import LoginModal from "./components/LoginModal"
 import CreateAccountModal from "./components/CreateAccountModal"
+import ManagePortifolio from "./components/ManagePortifolioModal"
+import ProtectedSecurely from "./components/ProtectedSecurelyModal"
+import CryptoVariety from "./components/CryptoVarietyModal"
+import LearnBestPractice from "./components/LearnBestPracticeModal"
 
 
 function App() {
@@ -17,18 +21,27 @@ function App() {
 
   return (
     <>
-      <Navbar openLogin={() => setShowModal('login')}/>
-      <Header openCreateAccount={() => setShowModal('create-account')}/>
+      <Navbar openLogin={() => setShowModal('login')} />
+      <Header openCreateAccount={() => setShowModal('create-account')} />
       <MarketTrend />
-      <Features />
+      <Features
+        openManagePortifolio={() => setShowModal('manage-portifolio')}
+        openProtectedSecurely={() => setShowModal('protect-securely')}
+        openCryptoVariety={() => setShowModal('crypto-variety')}
+        openLearnBestPractice={() => setShowModal('learn-best-practice')}
+      />
       <ActionToLearn />
       <MarketUpdate />
-      <GetStarted openCreateAccount={() => setShowModal('create-account')}/>
+      <GetStarted openCreateAccount={() => setShowModal('create-account')} />
       <LearnCrypto />
       <Footer />
 
-      {showModal === 'login' && <LoginModal onClose={() => setShowModal(null)} onCreateAccount={() => setShowModal('create-account')}/>}
-      {showModal === 'create-account' && <CreateAccountModal onClose={() => setShowModal(null)} onLogin={() => setShowModal('login')}/>}
+      {showModal === 'login' && <LoginModal onClose={() => setShowModal(null)} onCreateAccount={() => setShowModal('create-account')} />}
+      {showModal === 'create-account' && <CreateAccountModal onClose={() => setShowModal(null)} onLogin={() => setShowModal('login')} />}
+      {showModal === 'manage-portifolio' && <ManagePortifolio onClose={() => setShowModal(null)} />}
+      {showModal === 'protect-securely' && <ProtectedSecurely onClose={() => setShowModal(null)} />}
+      {showModal === 'crypto-variety' && <CryptoVariety onClose={() => setShowModal(null)} />}
+      {showModal === 'learn-best-practice' && <LearnBestPractice onClose={() => setShowModal(null)} />}
     </>
   )
 }
